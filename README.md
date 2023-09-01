@@ -2,6 +2,20 @@
 
 This project serves as an example of how to implement a GraphQL API using Java Spring Boot. GraphQL is a query language for your API and a server-side runtime for executing queries by using a type system you define for your data. Unlike traditional REST APIs, GraphQL allows clients to request only the specific data they need, reducing over-fetching and under-fetching of data.
 
+## Goals of GraphQL
+
+The goals of using GraphQL in this project are:
+
+- Efficient Data Fetching: GraphQL enables clients to request only the specific data they need, preventing over-fetching of data common in REST APIs.
+
+- Flexible Data Composition: Clients can define complex queries and receive all the required data in a single request.
+
+- API Documentation: The GraphQL schema serves as self-documenting documentation for the API, making it easier for clients to understand the available operations and types.
+
+- Versioning Control: GraphQL reduces the need for versioning by allowing the addition of new fields without affecting existing queries.
+
+- Optimized Mobile and Web Apps: GraphQL provides efficient data transfer for mobile and web applications, reducing data transfer and optimizing app performance.
+
 ## Requirements
 [Docker](https://www.docker.com/)
 
@@ -94,17 +108,3 @@ mutation {
   deleteBook(id: 1)
 }
 ```
-
-## Goals of GraphQL
-
-The goals of using GraphQL in this project are:
-
-- Efficient Data Fetching: GraphQL enables clients to request only the specific data they need, preventing over-fetching of data common in REST APIs.
-
-- Flexible Data Composition: Clients can define complex queries and receive all the required data in a single request.
-
-- API Documentation: The GraphQL schema serves as self-documenting documentation for the API, making it easier for clients to understand the available operations and types.
-
-- Versioning Control: GraphQL reduces the need for versioning by allowing the addition of new fields without affecting existing queries.
-
-- Optimized Mobile and Web Apps: GraphQL provides efficient data transfer for mobile and web applications, reducing data transfer and optimizing app performance.
