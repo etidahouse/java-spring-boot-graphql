@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ ! "$(command -v docker)" ]; then
+    echo "docker could not be found"
+    exit 0
+fi
+
+PROJECT_DIR="$(pwd)"
+
+docker run -it --rm \
+    --name maven-3.8.5-openjdk-17-slim \
+    -v "$PROJECT_DIR":/opt/maven/ \
+    -v "$PROJECT_DIR"/repository:/root/.m2/repository \
+    -w /opt/maven \
+    maven:3.8.5-openjdk-17-slim \
+    mvn clean install
